@@ -1,4 +1,3 @@
-// Sample Lambda function handler
 exports.handler = async (event) => {
     console.log("Event received:", event);
     return {
