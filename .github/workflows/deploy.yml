@@ -90,7 +90,7 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: List files
-        run: ls -al  # Listar archivos para verificar existencia del archivo
+        run: ls -al  # Listar archivos para verificar la existencia del archivo
       - name: Send Failure Notification
         run: node sendFailureNotification.js ${{ secrets.TO_EMAIL }} ${{ secrets.FROM_EMAIL }} "Pipeline Failed" "The pipeline for your project has failed. Please check the details in GitHub Actions."
         env:
