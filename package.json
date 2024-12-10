@@ -1,21 +1,19 @@
 {
-    "name": "alertify-inc-notification-system",
-    "version": "1.0.0",
-    "description": "A notification system for Alertify Inc",
-    "main": "index.js",
-    "scripts": {
-      "lint": "eslint .",
-      "test": "jest"
-    },
-    "dependencies": {
-      "aws-sdk": "^2.814.0",
-      "eslint": "^7.32.0"
-    },
-    "devDependencies": {
-      "eslint": "^7.32.0",
-      "jest": "^27.4.7"
-    },
-    "author": "",
-    "license": "ISC"
-  }
-  
+  "name": "alertify-inc-notification-system",
+  "version": "1.0.0",
+  "description": "A notification system for Alertify Inc",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "jest"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.814.0",
+    "jest": "^27.4.7"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0"
+  },
+  "author": "",
+  "license": "ISC"
+}
