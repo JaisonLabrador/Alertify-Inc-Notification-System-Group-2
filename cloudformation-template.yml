@@ -35,10 +35,9 @@ Resources:
       Code:
         S3Bucket: "lambda-functions"
         S3Key: "function.zip"
-      Runtime: "nodejs14.x"
+      Runtime: "nodejs18.x"  # Actualizar el runtime a nodejs18.x
       Environment:
         Variables: {}
-        # Eliminamos AWS_REGION ya que es una clave reservada
       Tags:
         - Key: "Project"
           Value: "Alertify-Inc"
