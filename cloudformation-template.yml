@@ -37,8 +37,11 @@ Resources:
         S3Key: "function.zip"
       Runtime: "nodejs14.x"
       Environment:
-        Variables:
-          AWS_REGION: !Ref "AWS::Region"
+        Variables: {}
+        # Eliminamos AWS_REGION ya que es una clave reservada
+      Tags:
+        - Key: "Project"
+          Value: "Alertify-Inc"
 
   SQSEventSourceMapping:
     Type: "AWS::Lambda::EventSourceMapping"
