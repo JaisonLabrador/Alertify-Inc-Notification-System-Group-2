@@ -59,4 +59,5 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: ${{ secrets.AWS_REGION }}
         run: |
-          aws lambda update-function-code --function-name Alertify-Inc-ProcessEvents-Unique --zip-file fileb://function.zip --region $AWS_REGION
+          aws lambda create-function --function-name Alertify-Inc-ProcessEvents-Unique --zip-file fileb://function.zip --handler index.handler --runtime nodejs18.x --role arn:aws:iam::$YOUR_ACCOUNT_ID:role/YOUR_LAMBDA_ROLE
+          aws lambda update-function-code --function-name Alertify-Inc-ProcessEvents-Unique --zip-file fileb://function.zip --region $AWS_REGION || true

@@ -32,10 +32,16 @@ Resources:
       FunctionName: "Alertify-Inc-ProcessEvents-Unique"
       Handler: "index.handler"
       Role: !GetAtt LambdaExecutionRole.Arn
+      Runtime: "nodejs18.x"
       Code:
-        S3Bucket: "lambda-functions"
-        S3Key: "function.zip"
-      Runtime: "nodejs18.x"  # Actualizar el runtime a nodejs18.x
+        ZipFile: |
+          exports.handler = async (event) => {
+            console.log("Event received:", event);
+            return {
+              statusCode: 200,
+              body: JSON.stringify({ message: "Hello from Lambda!" }),
+            };
+          };
       Environment:
         Variables: {}
       Tags:
