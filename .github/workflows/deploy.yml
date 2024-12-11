@@ -64,5 +64,5 @@ jobs:
             aws lambda update-function-code --function-name Alertify-Inc-ProcessEvents-Unique --zip-file fileb://function.zip --region $AWS_REGION
           else
             echo "Function does not exist, creating..."
-            aws lambda create-function --function-name Alertify-Inc-ProcessEvents-Unique --zip-file fileb://function.zip --handler index.handler --runtime nodejs18.x --role arn:aws:iam::YOUR_ACCOUNT_ID:role/MyLambdaExecutionRole
+            aws lambda create-function --function-name Alertify-Inc-ProcessEvents-Unique --zip-file fileb://function.zip --handler index.handler --runtime nodejs18.x --role arn:aws:iam::5901-8386-5524:role/MyLambdaExecutionRole
           fi
